@@ -33,8 +33,6 @@ public final class BindingManager implements KeyListener{
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		this.bindings.forEach(bind -> {
-			
-		});
+		
 	}
 }
