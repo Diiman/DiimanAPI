@@ -20,8 +20,6 @@
  */
 package com.diiman.diimanapi.module;
 
-import com.diiman.diimanapi.module.type.EnumModuleType;
-
 /**
  * @author Daniel "Diiman" Robinson
  * @date Aug 10, 2016 at 4:51:03 AM
@@ -29,39 +27,33 @@ import com.diiman.diimanapi.module.type.EnumModuleType;
 public interface IModule extends Comparable<IModule>{
 	
 	/**
-	 * Gets all of the modules aliases
-	 * @return
-	 * 		all module aliases
+	 * Gets the module alias(es).
+	 * 
+	 * @return all module aliases
 	 */
 	String[] getModuleAliases();
 	
 	/**
-	 * Gets the name of the module
-	 * @return
-	 * 		the name of the module
-	 */
-	String getModuleName();
-	
-	/**
 	 * Gets the module's description
-	 * @return
-	 * 		the module's description
+	 * 
+	 * @return the module's description
 	 */
 	String getModuleDescription();
 	
 	/**
 	 * Gets the module type
-	 * @return
-	 * 		the module type
+	 * 
+	 * @return the module type
 	 */
 	EnumModuleType getModuleType();
 	
 	/**
 	 * Gets the module array colo(u)r
-	 * @return
-	 * 		the module array color
+	 * 
+	 * @return the module array color
 	 */
 	int getModuleArrayColor();
+	
 	
 	
 }

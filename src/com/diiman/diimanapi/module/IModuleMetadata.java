@@ -18,27 +18,40 @@
  *  You can contact me (Daniel Robinson) through my email:
  *  <diiman@diiman.com>.
  */
-package com.diiman.diimanapi.command;
+package com.diiman.diimanapi.module;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import java.util.Properties;
 
 /**
  * @author Daniel "Diiman" Robinson
- * @date Aug 10, 2016 at 4:56:54 AM
+ * @date Aug 11, 2016.
  */
-public interface ICommand {
+public interface IModuleMetadata {
 	
 	/**
-	 * Gets the command alias(es).
+	 * Gets the module's author(s).
 	 * 
-	 * @return alias(es)
+	 * @return
+	 * 		authors
 	 */
-	String[] getCommandAliases();
+	String[] authors();
 	
 	/**
-	 * Gets the command usage.
+	 * Gets the state of the module.
 	 * 
-	 * @return command usage
+	 * @return
+	 * 		state
 	 */
-	String getCommandUsage();
+	EnumModuleState getState();
 	
-	//------------------------------------------------------------
+	/**
+	 * 
+	 * @return
+	 */
+	Properties getProperties();
+	
 }

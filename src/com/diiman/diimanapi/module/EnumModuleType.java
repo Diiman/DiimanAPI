@@ -18,27 +18,31 @@
  *  You can contact me (Daniel Robinson) through my email:
  *  <diiman@diiman.com>.
  */
-package com.diiman.diimanapi.command;
+package com.diiman.diimanapi.module;
 
 /**
  * @author Daniel "Diiman" Robinson
- * @date Aug 10, 2016 at 4:56:54 AM
+ * @date Aug 11, 2016.
  */
-public interface ICommand {
+public enum EnumModuleType {
 	
-	/**
-	 * Gets the command alias(es).
-	 * 
-	 * @return alias(es)
-	 */
-	String[] getCommandAliases();
+	AURA("Aura"),
+	COMBAT("Combat"),
+	CHAT("Chat"),
+	MOVEMENT("Movement"),
+	WORLD("World"),
+	RENDER("Render"),
+	BUILD("Build"),
+	MISC("Misc"),
+	BYPASSER("Bypasser");
 	
-	/**
-	 * Gets the command usage.
-	 * 
-	 * @return command usage
-	 */
-	String getCommandUsage();
+	private final String type;
 	
-	//------------------------------------------------------------
+	private EnumModuleType(String type) {
+		this.type = type;
+	}
+	
+	public String getType() {
+		return this.type;
+	}
 }
